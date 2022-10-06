@@ -1,12 +1,8 @@
 name: Download Terraform plan artifact and run apply
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-      - 'main'
-
+  workflow_call:
+  
 jobs:
   terraform:
     name: Terraform
