@@ -1,9 +1,7 @@
 name: Run terraform plan and upload artifact
 
 on:
-  pull_request:
-    types:
-      - opened
+  workflow_call:
 
 jobs:
   terraform:
