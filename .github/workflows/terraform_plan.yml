@@ -2,7 +2,14 @@ name: Run terraform plan and upload artifact
 
 on:
   workflow_call:
-
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        description: 'AWS access key ID'
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        description: 'AWS secret key'
+        required: true
+        
 jobs:
   terraform:
     name: Terraform
