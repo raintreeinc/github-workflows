@@ -2,6 +2,13 @@ name: Download Terraform plan artifact and run apply
 
 on:
   workflow_call:
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        description: 'AWS access key ID'
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        description: 'AWS secret key'
+        required: true
   
 jobs:
   terraform:
